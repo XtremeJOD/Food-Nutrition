@@ -4,9 +4,9 @@ This repository provides a RESTful API for managing food and nutrition data. It 
 
 Save food data with details like name, calories, protein, carbs, fibre, etc. Retrieve all saved food data for easy access and analysis. This API is built using Express.js and utilizes MongoDB for data storage.
 
-#Hi, I'm Shivam! 👋
+# Hi, I'm Shivam! 👋
 
-#Getting Start
+# Getting Start
 Clone this repository: git clone - (https://github.com/XtremeJOD/Food-Nutrition)
 
 Install dependencies: npm install
