@@ -7,7 +7,7 @@ Save food data with details like name, calories, protein, carbs, fibre, etc. Ret
 Hi, I'm Shivam! 👋
 
 Getting Start
-Clone this repository: git clone https://github.com/Aman24hub/Food-Nutrition-API.git
+Clone this repository: git clone [https://github.com/Aman24hub/Food-Nutrition-API.git](https://github.com/XtremeJOD/Food-Nutrition)
 
 Install dependencies: npm install
 
