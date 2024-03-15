@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Food and Nutrition</h1>
+    <table id="foodTable" border="1">
+        <thead>
+            <th>Name</th>
+            <th>Category</th>
+            <th>Calories</th>
+            <th>Protein_g</th>
+            <th>Carbohydrates_g</th>
+            <th>Sugar_g</th>
+            <th>Fiber_g</th>
+            <th>Vitain_c_mg</th>
+            <th>Action</th>
+        </thead>
+        <tbody id="tableBody"></tbody>
+    </table>
+    <script>
+        fetch('http://localhost:3200/getfooddata')
+        .then((res) => res.json())
+        .then((data) => {
+            console.log('fetch data', data);
+            const tableBody = document.getElementById('tableBody');
+            tableBody.innerHTML = '';
+    
+            data.forEach(food => {
+                const row = document.createElement('tr');
+                row.innerHTML = `
+                    <td>${food.name}</td>
+                    <td>${food.category}</td>
+                    <td>${food.calories}</td>
+                    <td>${food.protein_g}</td>
+                    <td>${food.carbohydrates_g}</td>
+                    <td>${food.sugar_g}</td>
+                    <td>${food.fiber_g}</td>
+                    <td>${food.vitamin_c_mg}</td>
+                    <td>
+                        <button onClick="editRow(this)">Edit</button>
+                        <button onClick="deleteRow('${food.calories}')">Delete</button>
+                        <button style="display:none;"onClick="saverow(this)">Save</button>
+                    </td>
+                `;
+                tableBody.appendChild(row);
+            });
+        })
+        .catch((e) => console.log(e));
+
+    const deleteRow=async (foodName)=>{
+        try{
+            const response=await fetch('http://localhost:3200/food/${foodName}',{
+                method:'DELETE'
+            }) 
+            const data=await response.json();
+            location.reload();
+        }
+        catch(e){
+            console.log(e);
+        }
+
+    }
+
+    </script>
+    
+</body>
+</html>

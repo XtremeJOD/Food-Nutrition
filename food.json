@@ -1,0 +1,35 @@
+{
+    "food_items": [
+      {
+        "name": "Apple",
+        "category": "Fruit",
+        "calories": 52,
+        "protein_g": 3,
+        "carbohydrates_g": 14,
+        "sugar_g": 10,
+        "fiber_g": 2,
+        "vitamin_c_mg": 8
+      },
+      {
+        "name": "Orange",
+        "category": "Fruit",
+        "calories": 62,
+        "protein_g": 1,
+        "carbohydrates_g": 15,
+        "sugar_g": 12,
+        "fiber_g": 3,
+        "vitamin_c_mg": 53
+      },
+      {
+        "name": "Kiwi",
+        "category": "Fruit",
+        "calories": 61,
+        "protein_g": 1,
+        "carbohydrates_g": 15,
+        "sugar_g": 9,
+        "fiber_g": 3,
+        "vitamin_c_mg": 71
+      }
+    ]
+  }
+  
